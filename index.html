@@ -1,34 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Password Generator</title>
     <link rel="stylesheet" href="style.css" />
+    <title>Password Generator</title>
+    
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>Password Generator</h1>
-      </header>
-      <div class="card">
-        <div class="card-header">
-          <h2>Generate a Password</h2>
+    
+    <div class="container">
+      <h1 class="title">Password Generator</h1>
+    
+
+      <h3 class="password-display" id="passwordDisplay">Password</h3>
+
+      <form id="passwordGeneratorForm" class="form">  
+        <label for="characterAmountNumber"> Password Length:</label> 
+           
+        <div class="character-amount-container">
+          <input type="range" type="number" min="8" max="128" name="length" value="12" id="characterAmountRange">
+          <input class="number-input" type="number" min="8" max="128" name="length" value="12" id="characterAmountNumber">
         </div>
-        <div class="card-body">
-          <textarea
-            readonly
-            id="password"
-            placeholder="Your Secure Password"
-            aria-label="Generated Password"
-          ></textarea>
-        </div>
-        <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
-        </div>
+
+        <label for="includeLowercase"> Include Lowercase:</label> 
+        <input type="checkbox" id="includeLowercase"></input>
+            
+        <label for="includeUppercase"> Include Uppercase:</label> 
+        <input type="checkbox" id="includeUppercase"></input>
+            
+        <label for="includeNumbers"> Include Numbers:</label> 
+        <input type="checkbox" id="includeNumbers"></input>
+
+        <label for="includeSymbol"> Include Symbols:</label> 
+        <input type="checkbox" id="includeSymbols"></input>
+
+        <button type="submit" class="btn"> Generate Password</button>
+      </form>
+
       </div>
     </div>
-    <script src="script.js"></script>
+
+    <script src="script.js">
+    </script>
   </body>
 </html>
